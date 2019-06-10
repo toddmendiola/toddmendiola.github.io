@@ -1,0 +1,19 @@
+{
+    "workbench.startupEditor": "welcomePage",
+    "window.zoomLevel": 0,
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.renderWhitespace": "none",
+    "liveSassCompile.settings.formats": [
+        {
+          "format": "compressed",
+          "extensionName": ".min.css",
+          "savePath": "/dist/css"
+        }
+      ],
+      "liveSassCompile.settings.includeItems": [
+          "assets/scss/main.scss"
+      ],
+      "liveServer.settings.donotShowInfoMsg": true
+}
+
