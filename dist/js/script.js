@@ -14,7 +14,7 @@ $(document).ready(function(){
         $('.nav li a').removeClass('menu-active');
         $('.nav li a[data-pos='+current_item+']').addClass("menu-active");
         animate_headers_text();
-        owl.css({'background-position':' calc(50% + '+(-current_item*20)+'px) center'});
+        owl.css({'background-position':' calc(50% + '+(-current_item*20)+'px) top'});
         if(current_item==0){
             $('.owl-prev').hide();
         }
@@ -71,8 +71,7 @@ $('#horizontal-container .owl-carousel').owlCarousel({
         go_pos = $(this).data("pos");
         $('.nav li a').removeClass('menu-active');
         $(this).addClass("menu-active");
-        animate_headers_text();
-        
+      
      
  
        owl.owlCarousel();
