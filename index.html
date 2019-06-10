@@ -11,15 +11,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
    <link rel="stylesheet" href="./dist/css/main.min.css" >
+   <link rel="stylesheet" href="./dist/css/mmenu.css" >
    <link rel="stylesheet" href="./dist/css/owl.carousel.min.css" >
    <link rel="stylesheet" href="./dist/css/owl.theme.default.min.css" >
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="./dist/js/owl.carousel.min.js"></script>
    <script src="./dist/js/bootstrap.min.js"></script>
-   
+   <script src="./dist/js/mmenu.js"></script>
    
 </head>
-<body>
+<body >
+<div id="my-page"> 
     
     <header>
         <div class="container d-flex justify-content-center">
@@ -31,26 +33,33 @@
                 <li ><a data-pos="4" href="#">Interests</a></li>
                 <li ><a data-pos="5" href="#">Portfolio</a></li>
                 <li ><a data-pos="6" href="#">Contacts</a></li>
-            </ul>            
+            </ul> 
+            <a href="#my-menu" class="navbar-button d-none"><i class="fas fa-bars"></i></a>
+           
         </div>
        
     </header>
+    <div  id="my-menu">
+            <ul class="nav">
+                <li ><a data-pos="0" href="#">About</a></li>
+                <li ><a data-pos="1" href="#">Experience</a></li>
+                <li ><a data-pos="2" href="#">Education</a></li>
+                <li ><a data-pos="3" href="#">Skills</a></li>
+                <li ><a data-pos="4" href="#">Interests</a></li>
+                <li ><a data-pos="5" href="#">Portfolio</a></li>
+                <li ><a data-pos="6" href="#">Contacts</a></li>
+            </ul>
+        </div>
     <div id="horizontal-container">
         <div class="owl-carousel owl-theme">
             <div class="item">
                 <section>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="person-image-container">
-                                    <img src="./dist/images/todd-mendiola.JPG" alt="sti-dasmarinas">
-                                </div>
-                                <div class="section_content">
-                                    <h1>Hi! I'm Todd Denmar, a Web Developer</h1>
-                                </div>
+                        <div class="person-image-container">
+                                <img src="./dist/images/todd-mendiola.JPG" alt="sti-dasmarinas">
                             </div>
-                        </div>
-                    </div>
+                            <div class="section_content">
+                                <h1>Hi! I'm Todd Denmar, a Web Developer</h1>
+                            </div>
                 </section>
             </div>
             <div class="item">
@@ -260,7 +269,18 @@
     </footer>
 
  <script>
- 
+
+$(document).ready(function(){
+    show_burger();
+});
+function show_burger(){
+    if (window.innerWidth <= 991) { 
+                $('.navbar-button').removeClass('d-none');
+            }
+            else{
+                $('.navbar-button').addClass('d-none');
+            }
+}
 $('#horizontal-container .owl-carousel').owlCarousel({
         loop:false,
         nav:false,
@@ -307,5 +327,41 @@ $('#horizontal-container .owl-carousel').owlCarousel({
     });
   
  </script>
+  <script>
+
+          $('.navbar-button').click(function(){
+            $('#my-menu').removeClass('d-none');
+            $('.sub-menu').show();
+          });
+
+         Mmenu.configs.classNames.selected = "active";
+         Mmenu.configs.offCanvas.page.selector = "#my-page";
+
+         document.addEventListener(
+            "DOMContentLoaded", () => {
+               const menu = new Mmenu( "#my-menu", {
+                  slidingSubmenus: false,
+                  "extensions": [
+                    "pagedim-black",
+                      "position-right",
+                      "theme-dark"
+                   ],
+                 
+               });
+
+               const api = menu.API;
+
+            
+                  
+            }
+         );
+
+
+         window.onresize = function() {
+          
+            show_burger();
+        }
+      </script>
+</div>
 </body>
 </html>
