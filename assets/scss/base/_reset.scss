@@ -3,7 +3,20 @@
   margin: 0px;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Roboto', sans-serif;
-
+html{
+  scroll-behavior: smooth !important;
 }
+body{
+  font-family: 'Roboto', sans-serif !important;
+  color: $primary_color !important;
+  
+  a{
+      text-decoration: none;
+      color: white;
+      &:hover{
+          color: #ccc;
+      }
+  }
+  
+}
+

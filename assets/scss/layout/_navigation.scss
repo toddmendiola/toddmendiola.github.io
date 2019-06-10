@@ -1,0 +1,22 @@
+.nav{
+
+    li{
+        display: inline;
+        margin: 0 10px;
+ 
+        a{
+            padding: 10px 15px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            transition: 0.3s ease-out;
+
+            -webkit-user-select: none;  /* Chrome all / Safari all */
+            -moz-user-select: none;     /* Firefox all */
+            -ms-user-select: none;      /* IE 10+ */
+            user-select: none;  
+        }
+    }
+}

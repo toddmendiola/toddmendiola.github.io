@@ -1,0 +1,122 @@
+section{
+    
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    padding: 40px;
+    box-sizing: border-box;
+    h1{
+   
+       white-space: normal;
+        text-align: center;
+        font-weight: bold;
+ 
+        letter-spacing: 4px;
+        font-family: 'Audiowide', cursive;
+      }
+      h2{
+        font-weight: bold !important;
+        font-family: 'Audiowide', cursive;
+      }
+      h3{
+        font-weight: bold;
+          font-size: 20px;
+          color: #d35400;
+          margin: 20px 0;
+      }
+      h4{
+        font-size: 18px;
+      
+        color: #2980b9;
+      }
+      h5{
+          font-weight: bolder;
+      }
+      .section_content{
+          padding: 20px;
+          margin-top: 20px;
+          white-space: normal;
+          ul li{
+              list-style-position: inside;
+          }
+      }
+}
+
+
+#horizontal-container{
+   
+    overflow-y: auto;
+ 
+  .item{
+      section{
+          width: 100%;
+      }
+  }
+}
+.pl_icons{
+    list-style: none;
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+
+    li{
+        display: inline-block;
+        margin: 0% auto;
+    }
+    img{
+        width: 200px !important;
+       
+    }
+}
+.image-container{
+ 
+    width: 100%;
+    overflow: hidden;
+    img{
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        
+    }
+}
+.person-image-container{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 50px;
+    img{
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+        
+    }
+}
+.modal-body{
+    img{
+        height: auto !important;
+        width: 100% !important;
+    }
+}
+.graphic_images{
+    img{
+        height: 200px !important;
+        width: auto !important;
+       
+      
+    }
+}
+
+.owl-carousel{
+    background-image: url(../../dist/images/bg-bg.jpg);
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
