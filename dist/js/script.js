@@ -3,7 +3,7 @@ $(document).ready(function(){
     show_burger();
     $('.mm-panel').css({'background-color':'#2c3e50'});
     $('.mm-navbar').css({'background-color':'#222f3e'});
-    
+    $('#my-menu').css({'display':'none', 'opacity': '1'});
     $('.mm-panel a').css({'color':'#fff'});
     var owl = $('.owl-carousel');
    
@@ -30,10 +30,10 @@ $(document).ready(function(){
 });
 function show_burger(){
     if (window.innerWidth <= 991) { 
-                $('.navbar-button').removeClass('d-none');
+                $('.navbar-button,#my-menu').removeClass('d-none');
             }
             else{
-                $('.navbar-button').addClass('d-none');
+                $('.navbar-button,#my-menu').addClass('d-none');
             }
 }
 $('#horizontal-container .owl-carousel').owlCarousel({
@@ -86,7 +86,7 @@ $('#horizontal-container .owl-carousel').owlCarousel({
 
 
           $('.navbar-button').click(function(){
-            $('#my-menu').removeClass('d-none');
+            $('#my-menu').css({'display':'block'});
             $('.sub-menu').show();
           });
 
