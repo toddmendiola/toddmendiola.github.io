@@ -26,7 +26,7 @@
     <header>
         <div class="container d-flex justify-content-center">
             <ul class="nav">
-                <li ><a data-pos="0" href="#">About</a></li>
+                <li ><a class="menu-active" data-pos="0" href="#">About</a></li>
                 <li ><a data-pos="1" href="#">Experience</a></li>
                 <li ><a data-pos="2" href="#">Education</a></li>
                 <li ><a data-pos="3" href="#">Skills</a></li>
@@ -41,7 +41,7 @@
     </header>
     <div  id="my-menu">
             <ul class="nav">
-                <li ><a data-pos="0" href="#">About</a></li>
+                <li ><a class="menu-active" data-pos="0" href="#">About</a></li>
                 <li ><a data-pos="1" href="#">Experience</a></li>
                 <li ><a data-pos="2" href="#">Education</a></li>
                 <li ><a data-pos="3" href="#">Skills</a></li>
@@ -243,7 +243,9 @@
                 </section>
             </div>
         </div>
+      
     </div>
+    
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -260,104 +262,9 @@
               </div>
             </div>
           </div>
-    <footer>
+    
 
-    </footer>
-
- <script>
-
-$(document).ready(function(){
-    show_burger();
-});
-function show_burger(){
-    if (window.innerWidth <= 991) { 
-                $('.navbar-button').removeClass('d-none');
-            }
-            else{
-                $('.navbar-button').addClass('d-none');
-            }
-}
-$('#horizontal-container .owl-carousel').owlCarousel({
-        loop:false,
-        nav:false,
-        dots:false,
-        responsiveClass:true,
-  
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    })
-
-    $('.nav li a').click(function(){
-        var owl = $('.owl-carousel');
-        go_pos = $(this).data("pos");
-        $('.nav li a').css({"pointer-events":"auto","color":"#fff"});
-        $(this).css({"pointer-events":"none","color":"#d35400"});
-        $("h2").animate({opacity: "0",marginTop: "-50"},10);
-        $("h2").animate({opacity: "1",marginTop: "0"},1000);
-
-
-        $("h3").animate({marginLeft: "-100px"},10);
-        $("h3").animate({marginLeft: "0"},1000);
-
-        $("h4").animate({marginLeft: "100px"},10);
-        $("h4").animate({marginLeft: "0"},1000);
-        
-        $('.item').css('transform','rotateY(360deg)');
- 
-       owl.owlCarousel();
-        owl.trigger('to.owl.carousel',go_pos);
-    });
-    $(".pop").on("click", function() {
-      
-        $('.imagepreview').attr('src', $(this).find('img').attr('src')); // here asign the image to the modal when the user click the enlarge link
-        $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
-    });
-  
- </script>
-  <script>
-
-          $('.navbar-button').click(function(){
-            $('#my-menu').removeClass('d-none');
-            $('.sub-menu').show();
-          });
-
-         Mmenu.configs.classNames.selected = "active";
-         Mmenu.configs.offCanvas.page.selector = "#my-page";
-
-         document.addEventListener(
-            "DOMContentLoaded", () => {
-               const menu = new Mmenu( "#my-menu", {
-                  slidingSubmenus: false,
-                  "extensions": [
-                    "pagedim-black",
-                      "position-right",
-                      "theme-dark"
-                   ],
-                 
-               });
-
-               const api = menu.API;
-
-            
-                  
-            }
-         );
-
-
-         window.onresize = function() {
-          
-            show_burger();
-        }
-      </script>
+<script src="./dist/js/script.js"></script>
 </div>
 </body>
 </html>
