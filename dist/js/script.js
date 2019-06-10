@@ -1,10 +1,12 @@
 
 $(document).ready(function(){
     show_burger();
+    splash_text();
     $('.mm-panel').css({'background-color':'#2c3e50'});
     $('.mm-navbar').css({'background-color':'#222f3e'});
     $('#my-menu').css({'display':'none', 'opacity': '1'});
     $('.mm-panel a').css({'color':'#fff'});
+  
     var owl = $('.owl-carousel');
    
     $('.owl-prev').hide();
@@ -28,6 +30,24 @@ $(document).ready(function(){
       
     })
 });
+
+function splash_text(){
+    $('.splash-screen .text-1').animate({'margin-top':'0'},1000);
+    $('.splash-screen .text-1').animate({'margin-top':'0'},500);
+    $('.splash-screen .text-1').animate({'margin-top':'-40px'},500);
+
+    $('.splash-screen .text-2').animate({'margin-top':'40px'},1500);
+    $('.splash-screen .text-2').animate({'margin-top':'0'},1000);
+    $('.splash-screen .text-2').animate({'margin-top':'0'},500);
+    $('.splash-screen .text-2').animate({'margin-top':'-40px'},500, function(){
+        $('.splash-screen img').css({'display':'none'});
+        $('.splash-screen').animate({'opacity':'0'}, 1000, function(){
+            $('.splash-screen').css({'display':'none'});
+        });
+    });
+    
+   
+}
 function show_burger(){
     if (window.innerWidth <= 991) { 
                 $('.navbar-button,#my-menu').removeClass('d-none');
