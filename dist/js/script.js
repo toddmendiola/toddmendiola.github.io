@@ -8,10 +8,7 @@ $(document).ready(function(){
     $('.mm-panel a').css({'color':'#fff'});
   
     var owl = $('.owl-carousel');
- 
-   
-});
-$(window).on('load',function(){
+   $(window).on('load',function(){
     $('.owl-prev').hide();
     owl.on('changed.owl.carousel', function(event) {
         var currentItem = event.item.index;
@@ -33,6 +30,9 @@ $(window).on('load',function(){
       
     })
    });
+   
+});
+
 function splash_text(){
     $('.splash-screen .text-1').animate({'margin-top':'0'},1000);
     $('.splash-screen .text-1').animate({'margin-top':'0'},500);
