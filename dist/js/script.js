@@ -16,7 +16,7 @@ $(document).ready(function(){
         $('.nav li a').removeClass('menu-active');
         $('.nav li a[data-pos='+current_item+']').addClass("menu-active");
         animate_headers_text();
-        owl.css({'background-position':' calc(50% + '+(-current_item*20)+'px) top'});
+        owl.css({'background-position':' calc(50% + '+(-current_item*20)+'px) bottom'});
         if(current_item==0){
             $('.owl-prev').hide();
         }
