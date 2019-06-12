@@ -30,7 +30,7 @@ $(document).ready(function(){
       
     })
    });
-   
+  
 });
 
 function splash_text(){
@@ -105,7 +105,7 @@ $('#horizontal-container .owl-carousel').owlCarousel({
         $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
     });
   
-
+  
 
           $('.navbar-button').click(function(){
             $('#my-menu').css({'display':'block'});
@@ -134,7 +134,14 @@ $('#horizontal-container .owl-carousel').owlCarousel({
             }
          );
 
-
+         var mmenu = $("#my-menu").mmenu({
+          
+        }).data('mmenu');
+        
+        $('.mm-listitem a').click(function( ev ) {
+            ev.preventDefault();
+            mmenu.close();
+        });
          window.onresize = function() {
           
             show_burger();
